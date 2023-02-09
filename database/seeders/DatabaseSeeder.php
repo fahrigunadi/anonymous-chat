@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\GroupChat;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,5 +21,20 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        GroupChat::insert([
+            [
+                'browser_id' => 'fdaffdadsa32',
+                'message' => 'Hai Welcome'
+            ],
+            [
+                'browser_id' => 'fdaffdadsa32',
+                'message' => 'Welcome oge mang'
+            ],
+            [
+                'browser_id' => 'fdaffdadsa32',
+                'message' => 'Enya Welcome'
+            ],
+        ]);
     }
 }
