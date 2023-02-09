@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GroupChatController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'chat');
+
+Route::get('ajax/chats', [GroupChatController::class, 'ajaxChat']);
+Route::post('ajax/chats', [GroupChatController::class, 'ajaxStoreChat']);
+Route::get('ajax/chats/new', [GroupChatController::class, 'ajaxNewChat']);
